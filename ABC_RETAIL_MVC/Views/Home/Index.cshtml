@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Hero Section -->
+<section class="text-center py-5" style="background: linear-gradient(135deg, #FF5F6D, #FFC371); color: #fff;">
+    <div class="container">
+        <h1 class="display-2 fw-bold mb-3" style="letter-spacing: 2px;">Welcome to <span style="color:#fffbe0;">ABC Retail</span></h1>
+        <p class="lead mb-4 fs-4">Discover the trendiest products with jaw-dropping deals & prices!</p>
+        <a href="/Products" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill shadow">🛍View Products</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="container my-5">
+    <h2 class="text-center fw-bold mb-5" style="color: #222; font-size: 2.5rem;">Why Choose <span style="color:#FF5F6D;">ABC Retail</span>?</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm feature-card" style="border-radius: 20px; background: #fff5e6;">
+                <div class="card-body text-center p-4">
+                    <i class="fas fa-shipping-fast fa-3x mb-3 text-primary" style="color: #FF7E5F;"></i>
+                    <h5 class="fw-semibold mb-2" style="color: #ff6f61;">Fast & Reliable Shipping</h5>
+                    <p class="text-muted">Swift delivery with secure handling at your doorstep—every time.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm feature-card" style="border-radius: 20px; background: #e6faff;">
+                <div class="card-body text-center p-4">
+                    <i class="fas fa-check-circle fa-3x mb-3" style="color: #1e90ff;"></i>
+                    <h5 class="fw-semibold mb-2" style="color: #1e90ff;">Quality Guaranteed</h5>
+                    <p class="text-muted">Only top-tier products pass our rigorous quality standards.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 border-0 shadow-sm feature-card" style="border-radius: 20px; background: #fff0f5;">
+                <div class="card-body text-center p-4">
+                    <i class="fas fa-headset fa-3x mb-3" style="color: #ff69b4;"></i>
+                    <h5 class="fw-semibold mb-2" style="color: #ff1493;">24/7 Customer Support</h5>
+                    <p class="text-muted">Our friendly team is always here to help—day or night.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call-to-Action Section -->
+<section class="py-5 text-center" style="background: linear-gradient(135deg, #f9d423, #ff4e50); color: #fff;">
+    <div class="container">
+        <h2 class="fw-bold mb-3">Stay in the Loop!</h2>
+        <p class="lead">Join our newsletter and never miss a deal.</p>
+        <form class="d-flex flex-column flex-md-row justify-content-center align-items-center mt-4 gap-3">
+            <input type="email" class="form-control w-75 w-md-50 rounded-pill px-4 py-2" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-light rounded-pill px-4 py-2 shadow-sm">Subscribe</button>
+        </form>
+    </div>
+</section>
+
+
+
+<!-- FontAwesome Script -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- Additional Styling -->
+<style>
+    .feature-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+
+
+    {
+        font-size: 2.5rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    }
+</style>
