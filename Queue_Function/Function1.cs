@@ -12,6 +12,31 @@ using Microsoft.Extensions.Logging;
 
 namespace Queue_Function;
 
+//Name: CLDV6212 Azure functions part 1 Getting the basics out the way HTTP Trigger
+//Author: IIE Emeris School of Computer Science
+//Url: https://youtu.be/l7s5u-QzYe8?si=UKfsznYR12jxdEa9
+//Date accessed: 05 October 2025
+
+//Name: CLDV6212 Azure functions part 2 Azure functions and queues triggers
+//Author:IIE Emeris School of Computer Science
+//Url: https://youtu.be/zP4umzRCsTM?si=-gG6a3p06R7kQtHy
+//Date accessed: 05 October 2025
+
+//Name: CLDV6212 Azure functions part 3 Azure functions and MVC
+//Author: IIE Emeris School of Computer Science
+//Url: https://youtu.be/x7yTh85fQbw?si=YVjxUyzChioyR2jb
+//Date accessed: 05 October 2025
+
+//Name: CLDV6212 Azure functions part 4 Azure functions and MVC and blobs
+//Author:IIE Emeris School of Computer Science
+//Url: https://youtu.be/r-VksPFfFpE?si=YBzXZTbKv4wVDbT8
+//Date accessed: 05 October 2025
+
+//Name: CLDV6212 Azure functions part 5 Azure functions publish
+//Author: IIE Emeris School of Computer Science
+//Url: https://youtu.be/GXGN-aWbwO0?si=OQcVvKZUEsLoIDtL
+//Date accessed: 05 October 2025
+
 public class Function1
 {
     private readonly ILogger<Function1> _logger;
@@ -24,7 +49,7 @@ public class Function1
     public Function1(ILogger<Function1> logger)
     {
         _logger = logger;
-        _storageConnectionString = Environment.GetEnvironmentVariable("connection");
+        _storageConnectionString = "DefaultEndpointsProtocol=https;AccountName=nmathenjwa;AccountKey=IhEaHkKo6KTuwo6VB6NnTzCcyjHy6Lkb7n8xw/gekIUeX3p3X5AdU8sL5KCXaQ3bUCN9JhKLTnF++AStIZaNEw==;EndpointSuffix=core.windows.net";
 
         var serviceClient = new TableServiceClient(_storageConnectionString);
         _ordersTable = serviceClient.GetTableClient("Orders");
