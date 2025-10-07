@@ -7,8 +7,8 @@
       "RelativeMoniker": "D:0:0:{636FF601-EC79-49A8-B8D6-9D08E2479AC7}|Queue_Function\\Queue_Function.csproj|solutionrelative:queue_function\\function1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{636FF601-EC79-49A8-B8D6-9D08E2479AC7}|Queue_Function\\Queue_Function.csproj|c:\\users\\lab_services_student\\source\\repos\\abc_retail_part2_functions\\queue_function\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{636FF601-EC79-49A8-B8D6-9D08E2479AC7}|Queue_Function\\Queue_Function.csproj|solutionrelative:queue_function\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{90ACC13E-BBB2-4AC4-B4E3-463C54012B6D}|ABC_RETAIL_MVC\\ABC_RETAIL_MVC.csproj|c:\\users\\lab_services_student\\source\\repos\\abc_retail_part2_functions\\abc_retail_mvc\\models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90ACC13E-BBB2-4AC4-B4E3-463C54012B6D}|ABC_RETAIL_MVC\\ABC_RETAIL_MVC.csproj|solutionrelative:abc_retail_mvc\\models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +18,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Products.cs",
+              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\ABC_RETAIL_PART2_FUNCTIONS\\ABC_RETAIL_MVC\\Models\\Products.cs",
+              "RelativeDocumentMoniker": "ABC_RETAIL_MVC\\Models\\Products.cs",
+              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\ABC_RETAIL_PART2_FUNCTIONS\\ABC_RETAIL_MVC\\Models\\Products.cs",
+              "RelativeToolTip": "ABC_RETAIL_MVC\\Models\\Products.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAASwBYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T19:22:12.855Z"
             },
             {
               "$type": "Document",
@@ -32,22 +44,9 @@
               "RelativeDocumentMoniker": "Queue_Function\\Function1.cs",
               "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\ABC_RETAIL_PART2_FUNCTIONS\\Queue_Function\\Function1.cs",
               "RelativeToolTip": "Queue_Function\\Function1.cs",
-              "ViewState": "AgIAALkAAAAAAAAAAAAiwMEAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAAApwH0AAABoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-07T18:48:03.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Customers.cs",
-              "DocumentMoniker": "C:\\Users\\lab_services_student\\source\\repos\\ABC_RETAIL_PART2_FUNCTIONS\\Queue_Function\\Customers.cs",
-              "RelativeDocumentMoniker": "Queue_Function\\Customers.cs",
-              "ToolTip": "C:\\Users\\lab_services_student\\source\\repos\\ABC_RETAIL_PART2_FUNCTIONS\\Queue_Function\\Customers.cs",
-              "RelativeToolTip": "Queue_Function\\Customers.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAwwBYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T18:45:56.412Z",
               "EditorCaption": ""
             }
           ]

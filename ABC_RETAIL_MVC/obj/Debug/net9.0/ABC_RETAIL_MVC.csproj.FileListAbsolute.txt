@@ -23,6 +23,7 @@ C:\Users\lab_services_student\source\repos\ABC_RETAIL_PART2_FUNCTIONS\ABC_RETAIL
 C:\Users\lab_services_student\source\repos\ABC_RETAIL_PART2_FUNCTIONS\ABC_RETAIL_MVC\obj\Debug\net9.0\ABC_RETAIL_MVC.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\lab_services_student\source\repos\ABC_RETAIL_PART2_FUNCTIONS\ABC_RETAIL_MVC\obj\Debug\net9.0\ABC_RETAIL_MVC.RazorAssemblyInfo.cache
 C:\Users\lab_services_student\source\repos\ABC_RETAIL_PART2_FUNCTIONS\ABC_RETAIL_MVC\obj\Debug\net9.0\ABC_RETAIL_MVC.RazorAssemblyInfo.cs
+C:\Users\lab_services_student\source\repos\ABC_RETAIL_PART2_FUNCTIONS\ABC_RETAIL_MVC\obj\Debug\net9.0\ABC_RETAIL_MVC.sourcelink.json
 C:\Users\lab_services_student\source\repos\ABC_RETAIL_PART2_FUNCTIONS\ABC_RETAIL_MVC\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Users\lab_services_student\source\repos\ABC_RETAIL_PART2_FUNCTIONS\ABC_RETAIL_MVC\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\lab_services_student\source\repos\ABC_RETAIL_PART2_FUNCTIONS\ABC_RETAIL_MVC\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json

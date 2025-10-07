@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -68,32 +68,86 @@ public class Function1
     }
 
     [Function(nameof(ProductsQueue))]
-    public async Task ProductsQueue([QueueTrigger("product-queue", Connection = "connection")] QueueMessage message)
+    public async Task ProductsQueue(
+    [QueueTrigger("product-queue", Connection = "connection")] QueueMessage message)
     {
-        _logger.LogInformation($"C# Queue trigger function processed: {message.MessageText}");
+        _logger.LogInformation("Triggered ProductsQueue function for product message.");
 
-        //create table if not exists
+        // Create the table if not exists
         await _productsTable.CreateIfNotExistsAsync();
 
-        //1. manually deserialize the message
-        var product = JsonSerializer.Deserialize<Products>(message.MessageText);
-
-        if (product == null)
+        // 1️⃣ Deserialize the message
+        Products? product;
+        try
         {
-            _logger.LogError("Failed to deserialize message.");
+            product = JsonSerializer.Deserialize<Products>(message.MessageText);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "❌ Failed to deserialize product message.");
             return;
         }
 
-        //2. set the required properties
-        product.RowKey = Guid.NewGuid().ToString();
+        if (product == null)
+        {
+            _logger.LogError("❌ Product message was null after deserialization.");
+            return;
+        }
+
+        // 2️⃣ Set partition and row keys
         product.PartitionKey = "Products";
+        product.RowKey = Guid.NewGuid().ToString();
 
-        _logger.LogInformation($"Saving entity with RowKey: {product.RowKey}");
+        _logger.LogInformation($"🆕 Processing Product: {product.ProductName} (RowKey: {product.RowKey})");
 
-        //3. manually add entity to table
-        await _productsTable.AddEntityAsync(product);
-        _logger.LogInformation("Entity saved successfully to the table");
+        // 3️⃣ Upload image to Blob Storage (if image data exists)
+        if (!string.IsNullOrEmpty(product.ProductImageUrl))
+        {
+            try
+            {
+                _logger.LogInformation("📦 Image data detected, preparing to upload to Blob Storage...");
+
+                // Convert Base64 to bytes
+                byte[] imageBytes = Convert.FromBase64String(product.ProductImageUrl);
+
+                // Create unique blob name
+                string blobName = $"{product.RowKey}.jpg";
+
+                // Create blob client
+                var blobClient = _blobContainerClient.GetBlobClient(blobName);
+
+                // Upload to Azure Blob Storage
+                using var stream = new MemoryStream(imageBytes);
+                await blobClient.UploadAsync(stream, overwrite: true);
+
+                // Store blob URL in product record
+                product.ProductImageUrl = blobClient.Uri.ToString();
+
+                _logger.LogInformation($"✅ Image uploaded successfully to Blob Storage: {product.ProductImageUrl}");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "❌ Failed to upload image to Blob Storage.");
+            }
+        }
+        else
+        {
+            _logger.LogInformation("ℹ️ No image data found for this product. Skipping blob upload.");
+        }
+
+        // 4️⃣ Save product to Table Storage
+        try
+        {
+            await _productsTable.AddEntityAsync(product);
+            _logger.LogInformation("✅ Product entity saved successfully to Azure Table Storage.");
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "❌ Failed to save product entity to Azure Table Storage.");
+        }
     }
+
+
 
     [Function(nameof(CustomersQueue))]
     public async Task CustomersQueue([QueueTrigger("customer-queue", Connection = "connection")] QueueMessage message)
@@ -198,6 +252,18 @@ public class Function1
             return response;
         }
     }
+
+    private async Task<string> UploadFileToBlobAsync(string fileName, byte[] fileBytes)
+    {
+        var blobClient = _blobContainerClient.GetBlobClient(fileName);
+
+        using var stream = new MemoryStream(fileBytes);
+        await blobClient.UploadAsync(stream, overwrite: true);
+
+        _logger.LogInformation($"File {fileName} uploaded to blob storage.");
+        return blobClient.Uri.ToString(); // return the blob URL
+    }
+
 
 
 }

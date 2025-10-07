@@ -19,9 +19,8 @@ namespace ABC_RETAIL_MVC.Models
         [JsonPropertyName("productdescription")]
         public string? ProductDescription { get; set; }
 
-        [Required]
-        [Display(Name = "Product Image")]
-        public IFormFile? ProductImage { get; set; }
+        [JsonPropertyName("ProductImageUrl")]
+        public string? ProductImageUrl { get; set; }
 
         [JsonPropertyName("timestamp")]
         public DateTimeOffset? Timestamp { get; set; }

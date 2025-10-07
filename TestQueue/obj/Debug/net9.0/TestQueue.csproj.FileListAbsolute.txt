@@ -17,6 +17,7 @@ C:\Users\lab_services_student\source\repos\ABC_RETAIL_PART2_FUNCTIONS\TestQueue\
 C:\Users\lab_services_student\source\repos\ABC_RETAIL_PART2_FUNCTIONS\TestQueue\obj\Debug\net9.0\TestQueue.AssemblyInfoInputs.cache
 C:\Users\lab_services_student\source\repos\ABC_RETAIL_PART2_FUNCTIONS\TestQueue\obj\Debug\net9.0\TestQueue.AssemblyInfo.cs
 C:\Users\lab_services_student\source\repos\ABC_RETAIL_PART2_FUNCTIONS\TestQueue\obj\Debug\net9.0\TestQueue.csproj.CoreCompileInputs.cache
+C:\Users\lab_services_student\source\repos\ABC_RETAIL_PART2_FUNCTIONS\TestQueue\obj\Debug\net9.0\TestQueue.sourcelink.json
 C:\Users\lab_services_student\source\repos\ABC_RETAIL_PART2_FUNCTIONS\TestQueue\obj\Debug\net9.0\TestQueue.csproj.Up2Date
 C:\Users\lab_services_student\source\repos\ABC_RETAIL_PART2_FUNCTIONS\TestQueue\obj\Debug\net9.0\TestQueue.dll
 C:\Users\lab_services_student\source\repos\ABC_RETAIL_PART2_FUNCTIONS\TestQueue\obj\Debug\net9.0\refint\TestQueue.dll
